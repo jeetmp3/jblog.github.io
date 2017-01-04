@@ -1,0 +1,22 @@
+buildscript {
+  repositories {
+      jcenter()
+  }
+
+  dependencies {
+    // optional, if you use asciidoctor markup
+    classpath 'org.asciidoctor:asciidoctor-java-integration:0.1.4'
+
+    classpath 'org.ajoberstar:gradle-git:0.12.0'
+  }
+}
+
+apply plugin: 'org.ajoberstar.github-pages'
+
+githubPages {
+  repoUri = 'git@github.com:jeetmp3/jeetmp3.github.io.git'
+}
+
+task publish(type: GradleBuild) {           
+    tasks = ['publishGhPages']
+}

@@ -5,6 +5,7 @@ locale: en_US
 description: Personal Blogger.
 logo: site-logo.png
 search: true
+url: https://jeetmp3.github.io
 
 # Jekyll configuration
 

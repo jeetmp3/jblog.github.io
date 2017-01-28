@@ -9,6 +9,8 @@ category: blogs
 tags: [GSON, JACKSON, JAVA, JSON]
 date: 2016-09-07T14:17:25-04:00
 date: 2016-09-07T14:17:25-04:00
+comments: true
+share: true
 ---
 
 This blog will guide you how to deserialize json into java generic types. Suppose we have 2 json as given below.

@@ -8,3 +8,4 @@ This blog will guide you how to deserialize json into java generic types. Suppos
      "profileUrl": "https://www.facebook.com/123456"
    }
  }`
+{% gist 7eff6ff303b58894715878833c381f24 %}

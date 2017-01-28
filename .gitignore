@@ -5,3 +5,6 @@ build/
 .gradle/
 ./_site/
 .sass-cache/
+run.sh
+_site/
+_site/*

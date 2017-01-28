@@ -1,0 +1,307 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>JBlogs  &#124; JSON deserialize generic types using Gson and Jackson </title>
+<meta name="description" content="This blog will guide you how to deserialize json into java generic types. Suppose we have 2 json as given below.
+
+">
+<meta name="keywords" content="GSON, JACKSON, JAVA, JSON">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="JSON deserialize generic types using Gson and Jackson">
+<meta name="twitter:description" content="This blog will guide you how to deserialize json into java generic types. Suppose we have 2 json as given below.
+
+">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSON deserialize generic types using Gson and Jackson">
+<meta property="og:description" content="This blog will guide you how to deserialize json into java generic types. Suppose we have 2 json as given below.
+
+">
+<meta property="og:url" content="http://localhost:4000/blogs/2016/09/08/JSON-deserialize-generic-types-using-Gson-and-Jackson.html">
+<meta property="og:site_name" content="JBlogs">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blogs/2016/09/08/JSON-deserialize-generic-types-using-Gson-and-Jackson.html">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="JBlogs Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#GSON" title="Pages tagged GSON">GSON</a></li><li><a href="http://localhost:4000/tags/#JACKSON" title="Pages tagged JACKSON">JACKSON</a></li><li><a href="http://localhost:4000/tags/#JAVA" title="Pages tagged JAVA">JAVA</a></li><li><a href="http://localhost:4000/tags/#JSON" title="Pages tagged JSON">JSON</a></li>
+        </ul>
+        
+          <h1 class="entry-title">JSON deserialize generic types using Gson and Jackson</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://localhost:4000/images/bio-photo.jpg" class="bio-photo" alt="Jitendra Singh bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Jitendra Singh</span></span>
+        <span class="entry-date date published"><time datetime="2016-09-08T04:17:25+10:00"><i class="fa fa-calendar-o"></i> September 08, 2016</time></span>
+        
+        
+        
+        
+      </footer>
+      <div class="entry-content">
+        <p>This blog will guide you how to deserialize json into java generic types. Suppose we have 2 json as given below.</p>
+
+<h6 id="socialaccountresponsejson">SocialAccountResponse.json</h6>
+<noscript><pre>{
+  &quot;status&quot;: true,
+  &quot;code&quot;: 200,
+  &quot;data&quot;: {
+    &quot;id&quot;: &quot;123456&quot;,
+    &quot;profileUrl&quot;: &quot;https://www.facebook.com/123456&quot;
+  }
+}</pre></noscript>
+<script src="https://gist.github.com/jeetmp3/d55647fc8a5805a70b3aafbde9bd349f.js?file=SocialAccountsResponse.json"> </script>
+
+<h6 id="userresponsejson">UserResponse.json</h6>
+<noscript><pre>{
+  &quot;status&quot;: true,
+  &quot;code&quot;: 200,
+  &quot;data&quot;: {
+    &quot;name&quot;: &quot;MyBlogs&quot;,
+    &quot;email&quot;: &quot;admin@myblogspro.com&quot;
+  }
+}</pre></noscript>
+<script src="https://gist.github.com/jeetmp3/d55647fc8a5805a70b3aafbde9bd349f.js?file=UserResponse.json"> </script>
+
+<p>Both json have common keys, only data object is being change. To deserialize these jsons without generic types we would have to create 2 wrappers with 2 actual data class. But with generic types we only need to create generic class for root keys and actual data class for every object in data key.</p>
+
+<h6 id="genericresponsejava">GenericResponse.java</h6>
+<noscript><pre>public class GenericResponse&lt;T&gt; {
+    private boolean status;
+    private int code;
+    private T data;
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+}</pre></noscript>
+<script src="https://gist.github.com/jeetmp3/312858a4702ec8f7a875d26f04515e26.js?file=GenericResponse.java"> </script>
+
+<h6 id="socialaccountsresponsejava">SocialAccountsResponse.java</h6>
+<noscript><pre>public class SocialAccountsResponse {
+    private String id;
+    private String profileUrl;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getProfileUrl() {
+        return profileUrl;
+    }
+
+    public void setProfileUrl(String profileUrl) {
+        this.profileUrl = profileUrl;
+    }
+}</pre></noscript>
+<script src="https://gist.github.com/jeetmp3/312858a4702ec8f7a875d26f04515e26.js?file=SocialAccountsResponse.java"> </script>
+
+<h6 id="userresponsejava">UserResponse.java</h6>
+<noscript><pre>public class UserResponse {
+    private String name;
+    private String email;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+}</pre></noscript>
+<script src="https://gist.github.com/jeetmp3/312858a4702ec8f7a875d26f04515e26.js?file=UserResponse.java"> </script>
+
+<p>Now We’ll deserialize above JSON in Generic class using below libraries</p>
+
+<ol>
+  <li><a href="https://github.com/google/gson" target="_blank">Google Gson</a></li>
+  <li><a href="https://github.com/FasterXML/jackson-databind" target="_blank">Jackson</a></li>
+</ol>
+
+<h4 id="deserialize-using-google-gson">1. Deserialize using Google Gson</h4>
+<noscript><pre>import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+public class GsonDeserializer {
+  public static void main(String []args) {
+        Gson gson = new Gson();
+        GenericResponse&lt;UserResponse&gt; response = gson.fromJson(jsonString, new TypeToken&lt;GenericResponse&lt;UserResponse&gt;&gt;(){}.getType());
+        System.out.println(response.getData().getName());
+        System.out.println(response.getData().getEmail());
+        
+        GenericResponse&lt;SocialAccountsResponse&gt; socialAccountResponse = gson.fromJson(jsonString, new TypeToken&lt;GenericResponse&lt;SocialAccountsResponse&gt;&gt;(){}.getType());
+        System.out.println(socialAccountResponse.getData().getId());
+        System.out.println(socialAccountResponse.getData().getProfileUrl());
+    }
+}</pre></noscript>
+<script src="https://gist.github.com/jeetmp3/6879107bd56ee9ede8cfdcfc8bdd1f5f.js?file=GsonDeserializer.java"> </script>
+
+<h4 id="deserialize-using-jackson">2. Deserialize using Jackson</h4>
+<noscript><pre>import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class GsonDeserializer {
+  public static void main(String []args) {
+        ObjectMapper mapper = new ObjectMapper();
+        GenericResponse&lt;UserResponse&gt; userResponse = mapper.readValue(jsonString, new TypeReference&lt;GenericResponse&lt;UserResponse&gt;&gt;() {});
+        System.out.println(userResponse.getData().getName());
+        System.out.println(userResponse.getData().getEmail());
+        
+        GenericResponse&lt;SocialAccountsResponse&gt; socialAccountResponse = mapper.readValue(jsonString, new TypeReference&lt;GenericResponse&lt;SocialAccountsResponse&gt;&gt;() {});
+        System.out.println(socialAccountResponse.getData().getId());
+        System.out.println(socialAccountResponse.getData().getProfileUrl());
+    }
+}</pre></noscript>
+<script src="https://gist.github.com/jeetmp3/e6650ba72955eb82095d0ead3029df4f.js?file=JacksonDeserializer.java"> </script>
+
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+      
+        <a href="http://localhost:4000/2017/01/25/Sample.html" class="btn" title="Sample">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2017 Jitendra Singh. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+
+
+</body>
+</html>

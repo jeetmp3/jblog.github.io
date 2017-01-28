@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-28T17:26:28+10:00</updated><id>http://localhost:4000//</id><title type="html">JBlogs</title><subtitle>Personal Blogger.</subtitle><entry><title type="html">Demo Post</title><link href="http://localhost:4000/blogs/2017/01/28/demo-post.html" rel="alternate" type="text/html" title="Demo Post" /><published>2017-01-28T00:00:00+10:00</published><updated>2017-01-28T00:00:00+10:00</updated><id>http://localhost:4000/blogs/2017/01/28/demo-post</id><content type="html" xml:base="http://localhost:4000/blogs/2017/01/28/demo-post.html">&lt;h3 id=&quot;this-is-demo-post&quot;&gt;This is demo post&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Hello world&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;hello world this is demo&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="blogs" /><summary type="html">This is demo post</summary></entry><entry><title type="html">Sample Demo</title><link href="http://localhost:4000/blogs/2017/01/27/sample-demo.html" rel="alternate" type="text/html" title="Sample Demo" /><published>2017-01-27T00:00:00+10:00</published><updated>2017-01-27T00:00:00+10:00</updated><id>http://localhost:4000/blogs/2017/01/27/sample-demo</id><content type="html" xml:base="http://localhost:4000/blogs/2017/01/27/sample-demo.html">&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HEllo WOrld&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><category term="blogs" /><category term="Java" /><category term="JSON" /><summary type="html">public static void main(String[] args) {
-    System.out.println(&quot;HEllo WOrld&quot;);
-}</summary></entry><entry><title type="html">Sample</title><link href="http://localhost:4000/articles/2017/01/26/Sample.html" rel="alternate" type="text/html" title="Sample" /><published>2017-01-26T00:00:00+10:00</published><updated>2017-01-26T00:00:00+10:00</updated><id>http://localhost:4000/articles/2017/01/26/Sample</id><content type="html" xml:base="http://localhost:4000/articles/2017/01/26/Sample.html">&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-28T18:11:06+10:00</updated><id>http://localhost:4000//</id><title type="html">JBlogs</title><subtitle>Personal Blogger.</subtitle><entry><title type="html">Sample</title><link href="http://localhost:4000/articles/2017/01/26/Sample.html" rel="alternate" type="text/html" title="Sample" /><published>2017-01-26T00:00:00+10:00</published><updated>2017-01-26T00:00:00+10:00</updated><id>http://localhost:4000/articles/2017/01/26/Sample</id><content type="html" xml:base="http://localhost:4000/articles/2017/01/26/Sample.html">&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HEllo WOrld&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -24,4 +10,149 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</content><summary type="html">public static void main(String[] args) {
     System.out.println(&quot;HEllo WOrld&quot;);
-}</summary></entry></feed>
+}</summary></entry><entry><title type="html">JSON deserialize generic types using Gson and Jackson</title><link href="http://localhost:4000/blogs/2016/09/08/JSON-deserialize-generic-types-using-Gson-and-Jackson.html" rel="alternate" type="text/html" title="JSON deserialize generic types using Gson and Jackson" /><published>2016-09-08T04:17:25+10:00</published><updated>2016-09-08T04:17:25+10:00</updated><id>http://localhost:4000/blogs/2016/09/08/JSON-deserialize-generic-types-using-Gson-and-Jackson</id><content type="html" xml:base="http://localhost:4000/blogs/2016/09/08/JSON-deserialize-generic-types-using-Gson-and-Jackson.html">&lt;p&gt;This blog will guide you how to deserialize json into java generic types. Suppose we have 2 json as given below.&lt;/p&gt;
+
+&lt;h6 id=&quot;socialaccountresponsejson&quot;&gt;SocialAccountResponse.json&lt;/h6&gt;
+&lt;noscript&gt;&lt;pre&gt;{
+  &amp;quot;status&amp;quot;: true,
+  &amp;quot;code&amp;quot;: 200,
+  &amp;quot;data&amp;quot;: {
+    &amp;quot;id&amp;quot;: &amp;quot;123456&amp;quot;,
+    &amp;quot;profileUrl&amp;quot;: &amp;quot;https://www.facebook.com/123456&amp;quot;
+  }
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/jeetmp3/d55647fc8a5805a70b3aafbde9bd349f.js?file=SocialAccountsResponse.json&quot;&gt; &lt;/script&gt;
+
+&lt;h6 id=&quot;userresponsejson&quot;&gt;UserResponse.json&lt;/h6&gt;
+&lt;noscript&gt;&lt;pre&gt;{
+  &amp;quot;status&amp;quot;: true,
+  &amp;quot;code&amp;quot;: 200,
+  &amp;quot;data&amp;quot;: {
+    &amp;quot;name&amp;quot;: &amp;quot;MyBlogs&amp;quot;,
+    &amp;quot;email&amp;quot;: &amp;quot;admin@myblogspro.com&amp;quot;
+  }
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/jeetmp3/d55647fc8a5805a70b3aafbde9bd349f.js?file=UserResponse.json&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Both json have common keys, only data object is being change. To deserialize these jsons without generic types we would have to create 2 wrappers with 2 actual data class. But with generic types we only need to create generic class for root keys and actual data class for every object in data key.&lt;/p&gt;
+
+&lt;h6 id=&quot;genericresponsejava&quot;&gt;GenericResponse.java&lt;/h6&gt;
+&lt;noscript&gt;&lt;pre&gt;public class GenericResponse&amp;lt;T&amp;gt; {
+    private boolean status;
+    private int code;
+    private T data;
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/jeetmp3/312858a4702ec8f7a875d26f04515e26.js?file=GenericResponse.java&quot;&gt; &lt;/script&gt;
+
+&lt;h6 id=&quot;socialaccountsresponsejava&quot;&gt;SocialAccountsResponse.java&lt;/h6&gt;
+&lt;noscript&gt;&lt;pre&gt;public class SocialAccountsResponse {
+    private String id;
+    private String profileUrl;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getProfileUrl() {
+        return profileUrl;
+    }
+
+    public void setProfileUrl(String profileUrl) {
+        this.profileUrl = profileUrl;
+    }
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/jeetmp3/312858a4702ec8f7a875d26f04515e26.js?file=SocialAccountsResponse.java&quot;&gt; &lt;/script&gt;
+
+&lt;h6 id=&quot;userresponsejava&quot;&gt;UserResponse.java&lt;/h6&gt;
+&lt;noscript&gt;&lt;pre&gt;public class UserResponse {
+    private String name;
+    private String email;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/jeetmp3/312858a4702ec8f7a875d26f04515e26.js?file=UserResponse.java&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Now We’ll deserialize above JSON in Generic class using below libraries&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/google/gson&quot; target=&quot;_blank&quot;&gt;Google Gson&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/FasterXML/jackson-databind&quot; target=&quot;_blank&quot;&gt;Jackson&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;deserialize-using-google-gson&quot;&gt;1. Deserialize using Google Gson&lt;/h4&gt;
+&lt;noscript&gt;&lt;pre&gt;import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+public class GsonDeserializer {
+  public static void main(String []args) {
+        Gson gson = new Gson();
+        GenericResponse&amp;lt;UserResponse&amp;gt; response = gson.fromJson(jsonString, new TypeToken&amp;lt;GenericResponse&amp;lt;UserResponse&amp;gt;&amp;gt;(){}.getType());
+        System.out.println(response.getData().getName());
+        System.out.println(response.getData().getEmail());
+        
+        GenericResponse&amp;lt;SocialAccountsResponse&amp;gt; socialAccountResponse = gson.fromJson(jsonString, new TypeToken&amp;lt;GenericResponse&amp;lt;SocialAccountsResponse&amp;gt;&amp;gt;(){}.getType());
+        System.out.println(socialAccountResponse.getData().getId());
+        System.out.println(socialAccountResponse.getData().getProfileUrl());
+    }
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/jeetmp3/6879107bd56ee9ede8cfdcfc8bdd1f5f.js?file=GsonDeserializer.java&quot;&gt; &lt;/script&gt;
+
+&lt;h4 id=&quot;deserialize-using-jackson&quot;&gt;2. Deserialize using Jackson&lt;/h4&gt;
+&lt;noscript&gt;&lt;pre&gt;import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class GsonDeserializer {
+  public static void main(String []args) {
+        ObjectMapper mapper = new ObjectMapper();
+        GenericResponse&amp;lt;UserResponse&amp;gt; userResponse = mapper.readValue(jsonString, new TypeReference&amp;lt;GenericResponse&amp;lt;UserResponse&amp;gt;&amp;gt;() {});
+        System.out.println(userResponse.getData().getName());
+        System.out.println(userResponse.getData().getEmail());
+        
+        GenericResponse&amp;lt;SocialAccountsResponse&amp;gt; socialAccountResponse = mapper.readValue(jsonString, new TypeReference&amp;lt;GenericResponse&amp;lt;SocialAccountsResponse&amp;gt;&amp;gt;() {});
+        System.out.println(socialAccountResponse.getData().getId());
+        System.out.println(socialAccountResponse.getData().getProfileUrl());
+    }
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/jeetmp3/e6650ba72955eb82095d0ead3029df4f.js?file=JacksonDeserializer.java&quot;&gt; &lt;/script&gt;</content><category term="blogs" /><category term="GSON" /><category term="JACKSON" /><category term="JAVA" /><category term="JSON" /><summary type="html">This blog will guide you how to deserialize json into java generic types. Suppose we have 2 json as given below.</summary></entry></feed>

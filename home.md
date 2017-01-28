@@ -1,3 +1,16 @@
+---
+layout: post
+title: Demo Post
+status: unpublished
+categories: blog
+tags: [java, google, Spring]
+type: post
+published: true
+comments: true
+date: 2014-09-11T15:39:55-04:00
+modified: 2016-06-01T14:19:19-04:00
+---
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/jeetmp3/jeetmp3.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.

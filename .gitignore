@@ -3,3 +3,5 @@ build
 build/
 .idea
 .gradle/
+./_site/
+.sass-cache/

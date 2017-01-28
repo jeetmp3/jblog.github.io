@@ -1,0 +1,1 @@
+git add . & git commit -m "Deploying..." & git push origin master

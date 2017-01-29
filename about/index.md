@@ -10,3 +10,5 @@ showHeading: true
 |__Name__|{{site.owner.name}}|
 |__Email__|{{site.owner.email}}|
 |__Contact Number__|{{site.owner.contact-number}}|
+
+[Download Resume]({{site.url}}/download/JitendraBisht_cv.pdf)

@@ -9,7 +9,7 @@ url: https://jeetmp3.github.io
 
 # Jekyll configuration
 
-permalink:   /:categories/:year/:month/:day/:title.html
+permalink:   /:categories/:year/:month/:day/:title
 markdown:    kramdown
 highlighter: rouge
 sass:

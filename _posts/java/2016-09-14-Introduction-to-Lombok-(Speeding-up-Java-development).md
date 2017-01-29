@@ -61,4 +61,84 @@ Everyone is familier with Getters/Setters in normal pojo. Generating getter/sett
 {% gist jeetmp3/fa6d9327b670071f11b417ca9693029f GetterAndSetterLombok.java %}
 
 You can add these annotations on Class level too. It will generate getters for all fields and setters for all non-final and non-static fields.
-{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f GetterAndSetterLombokClassLevel.java %} 
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f GetterAndSetterLombokClassLevel.java %}
+ 
+Above code is equvalant to
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f GetterAndSetterNormal.java %}
+
+**Note:** `@Setter` will not work on final fields.
+{: .notice}
+
+#### 2. @ToString and @EqualsAndHashCode
+__`@ToString`__ and __`@EqualsAndHashCode`__ generates `toString()`, `equals(Object object)` and `hashCode()` in our pojo. By default `@ToString` includes Classname and all non-static fields. You can specify fields in `of` property of `@ToString`. You can also exclude fields by `exclude` property.
+
+By default `@EqualsAndHashCode` include non-static and non-transient fields. You can include or exclude fields by providing in `of` and `exclude` property (Same as `@ToString`). It has extra property called `callSuper` which invokes superclass's implementation of `hashCode()` and `equals()`. By default it doesn't invoke superclass methods. You can override it by setting its value to `true`.
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f ToStringAndEqualsAndHashCode.java %}
+
+#### 3. @NonNull
+This annotation will generate null-check for any field. It can be used with Constructor args, fields or method args.
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f NonNullCheck.java %}
+
+Above code is equvalant to
+
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f NonNullCheckNormal.java %}
+
+#### 4. @NoArgsConstructor, @RequiredArgsConstructor and @AllArgsConstructor
+__`@NoArgsConstructor`__ will generate default constructor. If your class contains final fields, then a compilation error will be generated. So if you want to generate default constructor with default values for final fields set __force=true__ `@NoArgsConstructor(force = true)`.
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f NoArgsConstructor.java %}
+
+Above code is equvalant to
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f NoArgsConstructorNormal.java %}
+
+__`@RequiredArgsConstructor`__ will generate constructor, if your class contains final fields or any field marked with `@lombok.NotNull` then it'll generate parameterized constructor and those fields will be added in constructor args and null check will be added in construtor.
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f RequiredArgsConstructor.java  %}
+
+Above code is equvalant to
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f RequiredArgsConstructorNormal.java %}
+
+__`@AllArgsConstructor`__ will generate parameterized constructor with all fields as constructor args.
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f AllArgsConstructor.java %}
+
+Above code is equvalant to
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f AllArgsConstructorNormal.java %}
+
+**Note:** If you want to generate static factory method with private constructor then set `staticName` property of @xxxConstructor.
+ {: .notice}
+
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f ConstructorWithFactoryMethod.java %}
+
+Above code is equvalant to
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f ConstructorWithFactoryMethodNormal.java %}
+
+#### 5. @Data
+__`@Data`__ annotation can only be used with Class and it covers below annotations:
+
+* @Getter
+* @Setter
+* @RequiredArgsConstructor
+* @ToString
+* @EqualsAndHashCode
+* @Value
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f DataLombok.java %}
+Above code is equvalant to
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f DataLombokNormal.java %}
+
+#### 6. @Value
+__`@Value`__ is used to create Immutable pojo. By default class and all fields made final and no setters will be generated. Just like `@Data` it also generates `toString()`, `hashCode()` and `equals()`. If you don't want to make a field final then mark it with `@NonFinal`.
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f ValueLombok.java %}
+Above code is equvalant to
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f ValueLombokNormal.java %}
+
+#### 7. @Builder
+__`@Builder`__ is used to generate builder API pattern. It generates inner class called &lt;YourClassName&gt;Builder which expose builder pattern based setters. `@Singular` is used with `@Builder` and only valid with `java.util.List` types. This annotation will add to adder methods one for single elements and another for complete collection.
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f BuilderLombok.java %}
+Above code is equvalant to
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f BuilderLombokNormal.java %}
+
+#### 8. @Cleanup
+__`@Cleanup`__ helps in automatically close the resource. This annotation takes one parameter as closing method name. By default its value is __close__.
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f CleanupLombok.java %}
+Above code is equvalant to
+{% gist jeetmp3/fa6d9327b670071f11b417ca9693029f CleanupLombokNormal.java %}
+
+Happy Coding 😀😀😀 !!! If you have any feedback please comment down below.

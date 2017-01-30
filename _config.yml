@@ -42,7 +42,8 @@ owner:
   avatar: bio-photo.jpg
   email: jeet.mp3@gmail.com
   contact-number: +91-9990446178
-  disqus-shortname: jeet_mp3
+#  disqus-shortname: jeet_mp3
+  disqus-shortname: blogs-jbisht-com
   twitter: JitendraBisht3
   facebook: 100001590673679
   github: jeetmp3

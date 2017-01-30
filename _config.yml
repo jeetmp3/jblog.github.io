@@ -5,7 +5,7 @@ locale: en_US
 description: Its my personal blogger. I write about Java, Gradle, mongodb and other technical stuff :)
 logo: site-logo.png
 search: true
-url: http://jbisht.com
+url: http://blogs.jbisht.com
 
 # Jekyll configuration
 

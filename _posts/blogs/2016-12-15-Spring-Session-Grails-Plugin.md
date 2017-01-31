@@ -10,17 +10,13 @@ tags: [GRAILS, JAVA, SPRING-SESSION, JSON, JACKSON]
 date: 2016-12-15T00:00:00-04:00
 comments: true
 share: true
-excerpt: Part 1 of "Spring Session Grails Plugin" series. This blog series will cover Introduction, Installation and Redis Data store.
+excerpt: Part 1 of "Spring Session Grails Plugin" series. This blog series will cover Introduction, Installation and Redis Datastore.
 ---
 <a href="https://github.com/jeetmp3/spring-session" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 
-This tutorial will guide you how to configure and use <a href="https://grails.org/plugin/spring-session" target="_blank">spring-session grails plugin</a> 
-    in grails 2x application. This blog will also cover various data store currently supported by this plugin along with 
-    various serializers to serialize/deserialize your session to/from store.
-
-**Note:** Spring-session project supports various data store. This plugin currently supports only 3 datastores. Remaining datastores are under development. 
-    If you wish to contribute in adding data store support just <a href="https://github.com/jeetmp3/spring-session" target="_blank">fork me on GitHub</a>.
-{: .notice}
+This tutorial will guide you how to configure and use <a href="https://grails.org/plugin/spring-session" target="_blank">spring-session grails plugin</a>
+    in grails 2x application. This blog will also cover various datastore currently supported by this plugin along with
+    serializers to serialize/deserialize your session to/from the store.
 
 This blog is divided into 3 sections
 
@@ -29,18 +25,12 @@ This blog is divided into 3 sections
 3. Redis Datastore
 
 #### 1. Introduction
-This grails plugin helps you to easily setup <a href="http://projects.spring.io/spring-session/" target="_blank">spring-session</a> project in your grails 
-    application.
-     
-##### What is Spring-session? 
-Spring Session is project of Spring community which provides an API and implementations for managing a user’s session information. It allows
-    you to store user's session in different supported data store such as __Redis__, __MongoDB__, __JDBC__, __Hazelcast__, __Gemfire__ etc. Changing from one data store to another
-    is very easy. 
-    
-How it is better than traditional way of storing user's session? Well in spring-session you don't need to add any kind of jar inside the Servlet Container
-    (tomcat, jetty etc), no container specific dependency. Session management related API (jar) will be inside your application itself. Which helps in
-    migrating from one container to another or switch to another vendor (i.e. Tomcat to Jetty). One container can contain more than one applications
-    which might be using different types of data store to store user's session.
+This __grails plugin__ helps you to easily setup <a href="http://projects.spring.io/spring-session/" target="_blank">__Spring Session__</a> project in your grails application.
+
+##### What is Spring Session?
+__Spring Session__ is project of Spring community which provides an API and implementations for managing a user’s session information. It allows you to store user's session in datastore such as __Redis__, __MongoDB__, __JDBC__, __Hazelcast__, __Gemfire__ etc. You can easily change from one datastore to another.
+
+How it is better than traditional way of storing user's session? Well in Spring session you don't need to add any kind of jar inside the Servlet Container (tomcat, jetty etc), which means, no container specific dependency. Session management related API (jar) will be inside your application itself. So one container can contain more than one applications which might be using different types of datastore to store user's session. Which also helps in migrating from one container to another or switch to another vendor (i.e. Tomcat to Jetty).
 
 Other features offered by spring-session:
 
@@ -50,9 +40,12 @@ Other features offered by spring-session:
 * __WebSocket Support__ - provides the ability to keep the HttpSession alive when receiving WebSocket messages.
 
 By using this plugin you can achieve above features in your grails application.
-    
+
+**Note:** Spring Session project supports various datastore, which are not configured in this plugin yet. Those datastores are under development. If you wish to contribute in adding datastore support just <a href="https://github.com/jeetmp3/spring-session" target="_blank">fork me on GitHub</a>.
+{: .notice}
+
 #### 2. Installation
-Configuration the plugin is very easy. If you're using grails 2x then add following code in your `BuildConfig.groovy` inside the `plugins` block
+Plugin configuration is very easy. If you're using grails 2x then add following code in your `BuildConfig.groovy` inside the `plugins` block
 
 ```groovy
 plugins {
@@ -61,10 +54,10 @@ plugins {
 }
 ```
 
-**Note:** *By Default plugin will use Redis as it's default data store. Currently it supports Redis, Mongo and JDBC store to persist session.*
+**Note:** *By Default plugin will use Redis as it's default datastore. Currently it supports Redis, Mongo and JDBC store to persist session.*
 {: .notice}
 
-Currently, this plugin supports 3 data store.
+Currently, this plugin supports 3 datastore.
 
 1. Redis
 2. Mongo
@@ -74,7 +67,7 @@ This blog will cover __Redis__ datastore. Other datastores will be covered in ne
 
 ##### 1. Redis
 Initially spring-session project supported only redis datastore. So the Redis is the default datasotre for this plugin.
- To change data store you need to set below property in your `Config.groovy` file.
+ To change datastore you need to set below property in your `Config.groovy` file.
 
 ```groovy
 springsession.sessionStore=SessionStore.REDIS
@@ -99,7 +92,7 @@ Now run your grails application and once your app is up then run the below comma
 ```bash
 curl -c - localhost:8080/g2ss/home/index
 
-#Output 
+#Output
 #HttpOnly_localhost    FALSE    /g2ss/    FALSE    0    SESSION    9c3796b4-90d1-4f51-b340-4dc857f6cdd2
 ```
 
@@ -140,7 +133,7 @@ springsession.redis.poolConfig.maxIdle=8 // Pool config maximum idle connections
 springsession.redis.poolConfig.minIdle=0 // Pool config minimum active connections. Default is 0
 
 springsession.redis.sentinel.master=null // Redis sentinal master node name. Default is null
-springsession.redis.sentinel.nodes=[] // List of Map sentinal nodes. e.g. [ [host: 'localhost', port: 6379], [host: '', port: 0] ]. Default is blank 
+springsession.redis.sentinel.nodes=[] // List of Map sentinal nodes. e.g. [ [host: 'localhost', port: 6379], [host: '', port: 0] ]. Default is blank
 springsession.redis.sentinel.password=null // Redis sentinal password. Default is null
 springsession.redis.sentinel.timeout=2000 // Redis sentinal timeout. Default is 2000
 ```
@@ -169,8 +162,8 @@ springsession.defaultSerializer = Serializer.JSON
 
 That's it!!!
 
-Json serialization will work perfectly until your class has default constructor. But if any class doesn't have default constructor then you'll need 
-  to add mixin classes or serializer/deserializer for that class and a Jackson module class. This is the blog which will guide you to [Deserialize 
+Json serialization will work perfectly until your class has default constructor. But if any class doesn't have default constructor then you'll need
+  to add mixin classes or serializer/deserializer for that class and a Jackson module class. This is the blog which will guide you to [Deserialize
   json with Java parameterized constructor]({{ site.baseurl }}{% link _posts/blogs/2016-09-12-Deserialize-json-with-Java-parameterized-constructor.md %}).
 
 Let's take an example. I've my User class as mentioned below
@@ -266,7 +259,7 @@ public class SimpleModule extends Module {
 springsession.redis.jackson.modules = ['demo.SimpleModule']
 ```
 
-That's it. You're done. 
+That's it. You're done.
 
 In next post 
     I'll explain Mongo datastore. Happy coding, Cheers !!!

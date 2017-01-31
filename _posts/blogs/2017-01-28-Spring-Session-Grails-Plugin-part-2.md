@@ -3,7 +3,7 @@ layout: post
 title: Spring-Session Grails Plugin (Part 2)
 status: unpublish
 type: post
-published: true
+published: false
 comments: true
 category: blogs
 tags: [GRAILS, JAVA, SPRING-SESSION]

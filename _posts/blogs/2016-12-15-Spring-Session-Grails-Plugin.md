@@ -261,5 +261,5 @@ springsession.redis.jackson.modules = ['demo.SimpleModule']
 
 That's it. You're done.
 
-In [next post]({{ site.baseurl }}{% link _posts/blogs/2017-01-28-Spring-Session-Grails-Plugin-part-2.md %})
+In [next post]({{ site.baseurl }}{% link _posts/blogs/2017-02-01-Spring-Session-Grails-Plugin-part-2.md %})
     I'll explain Mongo datastore. Happy coding, Cheers !!!

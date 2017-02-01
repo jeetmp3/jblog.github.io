@@ -7,7 +7,7 @@ published: true
 comments: true
 category: blogs
 tags: [GRAILS, JAVA, SPRING-SESSION]
-date: 2017-01-28T00:00:00-04:00
+date: 2017-02-01T00:00:00-04:00
 comments: true
 share: true
 excerpt: Part 2 of "Spring Session Grails Plugin" series. This blog series will cover Mongo Data store.

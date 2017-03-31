@@ -18,7 +18,7 @@ Hi Folks hope you're doing well!
 
 I was quit busy since my last blog post. So this post is part of <a href="{{ site.baseurl }}/search/Spring-Session" target="_blank">__Spring-Session Grails Plugin__</a> blog series which will cover JDBC as your datastore. 
 
-In this blog post I'll explain how you can use JDBC as your session store. To use JDBC as your datastore you need to create two tables in your database. Spring Session doesn't use any type of ORM tool. You'll need to create two table one is for session and other for session attributes and the format will be like __<SESSION TABLE>__ and __<SESSION TABLE>_ATTRIBUTES__".
+In this blog post I'll explain how you can use JDBC as your session store. To use JDBC as your datastore you need to create two tables in your database. Spring Session doesn't use any type of ORM tool. You'll need to create two table one is for session and other for session attributes and the format will be like __&lt;SESSION TABLE&gt;__ and __&lt;SESSION TABLE&gt;_ATTRIBUTES__".
 
 ```sql
 CREATE TABLE SPRING_SESSION (

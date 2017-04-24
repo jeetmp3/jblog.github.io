@@ -9,7 +9,9 @@ layout: main
                 <a href="{{ site.url }}{{ post.url }}">
                     {{ post.title }}
                     <span class="entry-date">
-                        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+                        <b>
+                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+                        </b>
                     </span>
                     {% if post.excerpt %}
                         <span class="excerpt">
@@ -26,13 +28,17 @@ layout: main
 <!-- Pagination links -->
 <div class="pagination">
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+        <img src="/images/previous.png" width="48" height="48"/>
+    </a>
     {% else %}
     <!--<span class="previous">Previous</span>-->
     {% endif %}
     <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    <a href="{{ paginator.next_page_path }}" class="next">
+        <img src="/images/next.png" width="48" height="48"/>
+    </a>
     {% else %}
     <!--<span class="next">Next</span>-->
     {% endif %}

@@ -50,7 +50,7 @@ Plugin configuration is very easy. If you're using grails 2x then add following 
 ```groovy
 plugins {
     ...
-    runtime "org.grails.plugins:spring-session:1.2.2-RC1"
+    compile "org.grails.plugins:spring-session:2.0.0-RC1"
 }
 ```
 

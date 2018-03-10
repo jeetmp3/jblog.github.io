@@ -7,6 +7,11 @@ layout: main
         <li>
             <article>
                 <a href="{{ site.url }}{{ post.url }}">
+                    {% if post.logo %}
+                        <img src="/images/{{ post.logo }}" style="width: 32px; height: 32px;"/>
+                    {% else %}
+                        <img src="/images/favicon/favicon-32x32.png" style="width: 32px; height: 32px;"/>
+                    {% endif %}
                     {{ post.title }}
                     <span class="entry-date">
                         <b>

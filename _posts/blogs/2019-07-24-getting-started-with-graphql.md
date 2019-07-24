@@ -3,7 +3,7 @@ layout: post
 title: Getting started with GraphQL (Java)
 status: published
 type: post
-published: true
+published: false
 comments: true
 category: blogs
 tags: [GRAPHQL, API]

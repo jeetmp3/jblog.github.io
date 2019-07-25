@@ -22,33 +22,43 @@ GraphQL has 3 major parts
 3. Client
 
 ### GraphQL Server
-GraphQL server is responsible to validate & execute the queries and return the __needed response__ to the client. The client has free hand to select the fields as per it's need and server will return only those selected fields.  
+GraphQL server is responsible to validate & execute the queries and returns the response as per client's need. The client can select the fields as per need and server will return only those selected fields.  
 
 ### GraphQL Schema
-GraphQL schema consist the queries and types. As a API owner we can decide what queries & types will be available to the consumer. The schema has default root object type called __Query__ which contains all the queries.
+GraphQL has a specific language called __GraphQL Schema language__ to define schema. GraphQL schema consist of the queries and types. As a API owner we can decide what queries & types will be available to the consumer.
+The schema has default root object type called __Query__ which contains all the queries.
 An example schema is
 
 ```graphql
+#The root object
 type Query {
     hello: String
     greet(name: String): String
 }
+ #Defined Type
+type User{
+    name: String
+    age: Int
+}
 ```
-In above schema root object is Query and it has two field called *hello* and *greet* and both are String type. The *greet* has an input argument *name* which is a type of String. This means client can pass any string type argument while querying *greet*.
-For every field or query in the Query Type will have corresponding resolver which will be running at GraphQL Server. [Click here](https://graphql.org/learn/schema/) to read more about graphql schema and types.
+In above schema root object is Query and it has one field called *hello* and a method *greet* and both are returning String type. The *greet* has an input argument *name* which is a type of String. This means client can pass any string type argument while querying *greet*.
+
+The User type is defined type which has 2 fields name and age. GraphQL supports several built-in types like String, Int, Float, Boolean, etc. [Click here](https://graphql.org/learn/schema/) to read more about graphql schema and types.
+
+> For every field or query in the Query Type will have corresponding resolver which will be running at GraphQL Server. 
  
 ### Client
 The clients are the consumer. Since GraphQL works over Rest so any rest client can query the graphql. There are few tools which are great for testing. These tools gives the auto-completion features and we can view all possible queries and types.
 Some of the tools are __GraphiQL__, __insomnia__. 
 
-#### GraphQL Java in Action
+### GraphQL-Java in Action
 Below code will demonstrate you how to integrate GraphQL in Spring application. So let's start with the GraphQL schema file. 
 
 The code structure will look like
 
 ![GraphQL code structure](/images/graphql/graphql-code-structure.png)
 
-##### users.graphql
+##### Define schema file users.graphql
 
 ```graphql
 type Query {
@@ -78,7 +88,7 @@ Filename: GraphQLSchema.java
     }
 ```
 
-##### Step 2: Configuring resolvers
+##### Step 2: Configure Resolvers
 
 ```java
     private RuntimeWiring buildRuntimeWiring() {
@@ -158,4 +168,4 @@ Even same query with multiple times with alias
 
 You can find complete code [here](https://github.com/jeetmp3/tutorials/tree/master/graphql-java-intro)
 
-Happy Coding 😀😀😀 !!! If you have any feedback please comment down below.
+Happy Coding 😀😀😀 !!!

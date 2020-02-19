@@ -61,3 +61,5 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
+
+theme: jekyll-theme-cayman
